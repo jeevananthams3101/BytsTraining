@@ -1,7 +1,6 @@
 bool isUgly(int n){
     if(n<=0)
         return false;
-    int flag=0;
     while(n!=1)
     {
         if(n%5==0)
@@ -12,12 +11,8 @@ bool isUgly(int n){
             n/=2;
         else
         {
-            flag++;
-            break;
+            return false;
         }
     }
-    if(flag==0)
-        return true;
-    else
-        return false;
+    return true;
 }
